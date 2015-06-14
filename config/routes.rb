@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'application#index'
+
   resources :posts, except: [:new, :edit] do
     resources :comments, except: [:new, :edit]
   end
