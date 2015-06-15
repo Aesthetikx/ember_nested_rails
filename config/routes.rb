@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
-  resources :posts, except: [:new, :edit] do
-    resources :comments, except: [:new, :edit]
+  namespace :api do
+    resources :posts, except: [:new, :edit] do
+      resources :comments, except: [:new, :edit]
+    end
   end
+
+  get '(*foo)' => 'application#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
