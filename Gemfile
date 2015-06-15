@@ -9,3 +9,5 @@ gem 'spring', :group => :development
 gem 'sqlite3'
 
 gem 'ember-cli-rails'
+
+gem 'active_model_serializers'
